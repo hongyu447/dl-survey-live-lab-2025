@@ -7,22 +7,79 @@ For each experiment you run this semester:
 
 ---
 
-## Experiment Template
+## Experiment 01_baseline_random_forest
 
-### Run #: 
+### Run #: 1
 ### Date:
 ### Goal / Question:
-(What are you testing or curious about?)
-
-### Setup:
-(What data, model, hyperparameters, preprocessing did you use?)
-
+testing how num_estimators affects the classifier
+### Setup: rf
+rf2 = RandomForestClassifier(
+    n_estimators=50,   # try 50 / 100 / 200
+    max_depth=None,     # try 10 / 20 / None
+    min_samples_split=2,  # try 2 / 5
+    random_state=42
+)
 ### Results:
-(Key metrics: accuracy, precision/recall, confusion matrix, etc.)
+              precision    recall  f1-score   support
+
+       <=50K       0.88      0.92      0.90      7431
+        >50K       0.71      0.61      0.66      2338
+
+    accuracy                           0.85      9769
+   macro avg       0.80      0.77      0.78      9769
+weighted avg       0.84      0.85      0.84      9769
 
 ### Reflection:
 (What worked? What didn’t? What would you try next?)
 
+### Run #: 2
+### Date:
+### Goal / Question:
+testing how num_estimators affects the classifier
+### Setup: rf
+rf2 = RandomForestClassifier(
+    n_estimators=100,   # try 50 / 100 / 200
+    max_depth=None,     # try 10 / 20 / None
+    min_samples_split=2,  # try 2 / 5
+    random_state=42
+)
+### Results:
+             precision    recall  f1-score   support
+
+       <=50K       0.88      0.92      0.90      7431
+        >50K       0.72      0.61      0.66      2338
+
+    accuracy                           0.85      9769
+   macro avg       0.80      0.77      0.78      9769
+weighted avg       0.84      0.85      0.85      9769
+
+### Reflection:
+(What worked? What didn’t? What would you try next?)
+
+### Run #: 3
+### Date:
+### Goal / Question:
+testing how num_estimators affects the classifier
+### Setup: rf
+rf2 = RandomForestClassifier(
+    n_estimators=200,   # try 50 / 100 / 200
+    max_depth=None,     # try 10 / 20 / None
+    min_samples_split=2,  # try 2 / 5
+    random_state=42
+)
+### Results:
+              precision    recall  f1-score   support
+
+       <=50K       0.88      0.93      0.90      7431
+        >50K       0.72      0.61      0.66      2338
+
+    accuracy                           0.85      9769
+   macro avg       0.80      0.77      0.78      9769
+weighted avg       0.84      0.85      0.85      9769
+
+### Reflection:
+Mininal changes
 
 # Example Experiment Log — Taiwo 
 
